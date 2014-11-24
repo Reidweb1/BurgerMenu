@@ -41,17 +41,25 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let duration : NSTimeInterval = 1.0
+        let delay : NSTimeInterval = 0.0
+        let damping : CGFloat = 0.75
+        let velocity : CGFloat = 0.6
         self.menuLeadingConstraint.constant = -216
-        UIView.animateWithDuration(0.25, animations: { () -> Void in
+        UIView.animateWithDuration(duration, delay: delay, usingSpringWithDamping: damping, initialSpringVelocity: velocity, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
             self.view.layoutIfNeeded()
-        })
+            }, completion: nil)
     }
     
     func tappedMenu(sender: AnyObject) {
+        let duration : NSTimeInterval = 1.0
+        let delay : NSTimeInterval = 0.0
+        let damping : CGFloat = 0.75
+        let velocity : CGFloat = 0.75
         self.menuLeadingConstraint.constant = -16
-        UIView.animateWithDuration(0.25, animations: { () -> Void in
+        UIView.animateWithDuration(duration, delay: delay, usingSpringWithDamping: damping, initialSpringVelocity: velocity, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
             self.view.layoutIfNeeded()
-        })
+        }, completion: nil)
     }
     
 }
