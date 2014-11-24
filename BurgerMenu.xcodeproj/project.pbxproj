@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		2856C2EF1A23DF60007F101C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2856C2EE1A23DF60007F101C /* AppDelegate.swift */; };
 		2856C2F21A23DF60007F101C /* BurgerMenu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2856C2F01A23DF60007F101C /* BurgerMenu.xcdatamodeld */; };
-		2856C2F41A23DF60007F101C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2856C2F31A23DF60007F101C /* ViewController.swift */; };
 		2856C2F71A23DF60007F101C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2856C2F51A23DF60007F101C /* Main.storyboard */; };
 		2856C2F91A23DF60007F101C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2856C2F81A23DF60007F101C /* Images.xcassets */; };
 		2856C2FC1A23DF60007F101C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2856C2FA1A23DF60007F101C /* LaunchScreen.xib */; };
 		2856C3081A23DF60007F101C /* BurgerMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2856C3071A23DF60007F101C /* BurgerMenuTests.swift */; };
+		28AD09FD1A23E1D400A31917 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AD09FC1A23E1D400A31917 /* HomeViewController.swift */; };
+		28AD0A011A23E34C00A31917 /* MenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AD0A001A23E34C00A31917 /* MenuTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +32,14 @@
 		2856C2ED1A23DF60007F101C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2856C2EE1A23DF60007F101C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2856C2F11A23DF60007F101C /* BurgerMenu.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BurgerMenu.xcdatamodel; sourceTree = "<group>"; };
-		2856C2F31A23DF60007F101C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2856C2F61A23DF60007F101C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2856C2F81A23DF60007F101C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2856C2FB1A23DF60007F101C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2856C3011A23DF60007F101C /* BurgerMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BurgerMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2856C3061A23DF60007F101C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2856C3071A23DF60007F101C /* BurgerMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMenuTests.swift; sourceTree = "<group>"; };
+		28AD09FC1A23E1D400A31917 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		28AD0A001A23E34C00A31917 /* MenuTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				2856C2EE1A23DF60007F101C /* AppDelegate.swift */,
-				2856C2F31A23DF60007F101C /* ViewController.swift */,
+				28AD09FC1A23E1D400A31917 /* HomeViewController.swift */,
+				28AD0A001A23E34C00A31917 /* MenuTableCell.swift */,
 				2856C2F51A23DF60007F101C /* Main.storyboard */,
 				2856C2F81A23DF60007F101C /* Images.xcassets */,
 				2856C2FA1A23DF60007F101C /* LaunchScreen.xib */,
@@ -215,9 +218,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2856C2F41A23DF60007F101C /* ViewController.swift in Sources */,
 				2856C2EF1A23DF60007F101C /* AppDelegate.swift in Sources */,
 				2856C2F21A23DF60007F101C /* BurgerMenu.xcdatamodeld in Sources */,
+				28AD09FD1A23E1D400A31917 /* HomeViewController.swift in Sources */,
+				28AD0A011A23E34C00A31917 /* MenuTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +415,7 @@
 				2856C30D1A23DF60007F101C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2856C30E1A23DF60007F101C /* Build configuration list for PBXNativeTarget "BurgerMenuTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				2856C3101A23DF60007F101C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
