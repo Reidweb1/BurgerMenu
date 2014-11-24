@@ -13,6 +13,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var menuLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var menuButton: UIView!
+    var newChildViewControllers : Array<UIViewController> = []
+    var currentChildViewController : UIViewController!
+    var childView = UIView()
+    var index = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +27,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let touchGesture = UITapGestureRecognizer(target: self, action: "tappedMenu:")
         self.menuButton.addGestureRecognizer(touchGesture)
         self.tableView.superview?.sendSubviewToBack(self.menuButton)
+        
+        var childVC1 = UIViewController()
+        var childVC2 = UIViewController()
+        childVC1.view.backgroundColor = UIColor.purpleColor()
+        childVC2.view.backgroundColor = UIColor.yellowColor()
+        self.newChildViewControllers += [childVC1, childVC2]
+        
+        self.addChildViewController(childVC1)
+        childVC1.view.frame = self.view.frame
+        self.childView.addSubview(childVC1.view)
+        childVC1.didMoveToParentViewController(self)
+        self.currentChildViewController = childVC1
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,6 +57,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        
+        
         let duration : NSTimeInterval = 1.0
         let delay : NSTimeInterval = 0.0
         let damping : CGFloat = 0.75
